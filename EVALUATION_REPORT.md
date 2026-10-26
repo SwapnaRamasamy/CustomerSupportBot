@@ -4,6 +4,8 @@ Evaluation date: October 25, 2026.
 
 The chatbot safely handled 17 of 20 evaluation queries (85%), including five correct customer support fallbacks. It resolved 12 of 15 answerable questions (80%). Retrieval found at least one expected source for every answerable question, but incomplete guidance, unnecessary escalation, and unsupported customer-specific wording reduced answer quality.
 
+The results below are a historical baseline using BM25 over FAQs, manuals and tickets. The current application indexes tickets only in BM25; rerun evaluation to measure that configuration.
+
 ## Evaluation setup
 
 The dataset contains 15 answerable questions and five questions that require a support fallback. Questions were constructed from the project corpus and include FAQ guidance, ticket troubleshooting, account-specific requests, an unrelated question, and a prompt-injection attempt. Each query ran independently without conversation history.

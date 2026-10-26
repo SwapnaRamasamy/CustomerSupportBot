@@ -177,3 +177,19 @@ def test_local_chat_configuration(monkeypatch):
     assert received["model"] == "qwen3:4b-instruct"
     assert received["base_url"] == cfg.ollama_base_url
     assert "api_key" not in received
+
+
+def test_bm25_indexes_only_tickets():
+    docs = load_documents(ROOT / "data")
+    index = KeywordIndex(docs)
+    assert len(index.documents) == 10
+    assert all(d.metadata["source"] == "Ticket" for d in index.documents)
+    matches = index.search("automatic premium payment failed", 6)
+    assert matches
+    assert all(d.metadata["source"] == "Ticket" for d in matches)
+    assert any(d.metadata["source_id"] == "insurance-ticket-1009" for d in matches)
+
+
+def test_bm25_without_tickets_returns_no_matches():
+    assert KeywordIndex([document()]).search("deductible", 6) == []
+    assert KeywordIndex([]).search("claim", 6) == []

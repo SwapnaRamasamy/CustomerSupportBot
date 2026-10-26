@@ -14,13 +14,13 @@ def tokens(text):
 
 class KeywordIndex:
     def __init__(self, documents):
-        self.documents = documents
-        self.tokenized = [tokens(d.page_content) for d in documents]
-        self.index = BM25Okapi(self.tokenized)
+        self.documents = [d for d in documents if d.metadata.get("source") == "Ticket"]
+        self.tokenized = [tokens(d.page_content) for d in self.documents]
+        self.index = BM25Okapi(self.tokenized) if self.tokenized and any(self.tokenized) else None
 
     def search(self, query, k):
         query_tokens = tokens(query)
-        if not query_tokens:
+        if not query_tokens or self.index is None:
             return []
         scores = self.index.get_scores(query_tokens)
         ranked = sorted(range(len(scores)), key=lambda i: float(scores[i]), reverse=True)

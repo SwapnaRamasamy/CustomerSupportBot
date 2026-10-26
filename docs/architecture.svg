@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1080" viewBox="0 0 1400 1080" role="img" aria-labelledby="title desc">
+<title id="title">Car insurance chatbot architecture</title>
+<desc id="desc">Streamlit, CLI and FastAPI call ChatService and LangGraph. Local Qwen generates and reviews answers. Hybrid search combines local BM25 over tickets only with Pinecone semantic search using local Nomic query embeddings. Ingestion uploads FAQ and manual vectors, text and metadata to Pinecone; tickets stay local.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#46647d"/></marker><marker id="tealArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f8c"/></marker></defs>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#17344b}.title{font-size:29px;font-weight:700}.heading{font-size:18px;font-weight:700}.body{font-size:15px}.small{font-size:13px;fill:#506c81}.label{font-size:12px;font-weight:700;letter-spacing:1.5px;fill:#5d788d}.edge{fill:none;stroke:#46647d;stroke-width:2;marker-end:url(#arrow)}.ingest{fill:none;stroke:#087f8c;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#tealArrow)}</style>
+<rect width="1400" height="1080" fill="#f5f8fc"/>
+<text x="44" y="50" class="title">Car insurance chatbot architecture</text>
+<text x="44" y="79" class="body">Local models and keyword retrieval with a hosted semantic index</text>
+<rect x="24" y="105" width="985" height="859" rx="22" fill="#fff" stroke="#d4e0ea"/>
+<text x="46" y="135" class="label">LOCAL APPLICATION</text>
+<rect x="1034" y="105" width="342" height="859" rx="22" fill="#edf7f5" stroke="#bbdcd6"/>
+<text x="1057" y="135" class="label">HOSTED PINECONE</text>
+<rect x="684" y="315" width="300" height="490" rx="16" fill="#eef5fb" stroke="#d1dfed"/>
+<text x="706" y="340" class="label">LOCAL OLLAMA SERVICE</text>
+
+<rect x="60" y="155" width="260" height="76" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="78" y="184" class="heading">Streamlit browser UI</text>
+<text x="78" y="209" class="body">Session history and sources</text>
+<rect x="365" y="155" width="260" height="76" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="383" y="184" class="heading">Command line chat</text>
+<text x="383" y="209" class="body">Interactive terminal</text>
+<rect x="670" y="155" width="260" height="76" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="688" y="184" class="heading">FastAPI</text>
+<text x="688" y="209" class="body">POST /chat and GET /health</text>
+<path d="M190 231 V253 H495 V270" class="edge"/>
+<path d="M495 231 V270" class="edge"/>
+<path d="M800 231 V253 H495" class="edge"/>
+<rect x="365" y="270" width="260" height="70" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="383" y="299" class="heading">ChatService</text>
+<text x="383" y="324" class="body">Shared application logic</text>
+<path d="M495 340 V370" class="edge"/>
+<rect x="365" y="370" width="260" height="100" rx="13" fill="#e8f6f3" stroke="#92c8bd"/>
+<text x="383" y="399" class="heading">LangGraph workflow</text>
+<text x="383" y="424" class="body">Prepare query and generate</text>
+<text x="383" y="445" class="body">Validate citations and review</text>
+<rect x="705" y="370" width="260" height="100" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="723" y="399" class="heading">qwen3:4b-instruct</text>
+<text x="723" y="424" class="body">Rewrite, generate and review</text>
+<text x="723" y="445" class="body">Structured JSON responses</text>
+<path d="M625 408 H705" class="edge"/>
+<text x="635" y="395" class="small">Local model calls</text>
+<path d="M705 440 H625" class="edge"/>
+<path d="M495 470 V510" class="edge"/>
+<rect x="365" y="510" width="260" height="100" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="383" y="539" class="heading">HybridRetriever</text>
+<text x="383" y="564" class="body">Parallel semantic + keyword</text>
+<text x="383" y="585" class="body">Reciprocal rank fusion; top 6</text>
+<rect x="1056" y="475" width="298" height="145" rx="13" fill="#fff" stroke="#8bbfb2"/>
+<text x="1074" y="504" class="heading">Cosine vector index</text>
+<text x="1074" y="529" class="body">car-insurance-nomic</text>
+<text x="1074" y="550" class="body">768 dimensions</text>
+<text x="1074" y="571" class="body">FAQ/manual text and metadata</text>
+<text x="1074" y="592" class="body">Namespace per corpus fingerprint</text>
+<path d="M625 548 H1056" class="edge"/>
+<text x="738" y="535" class="small">Query vector / matching chunks</text>
+<path d="M1056 578 H625" class="edge"/>
+<rect x="60" y="665" width="260" height="100" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="78" y="694" class="heading">BM25 keyword index</text>
+<text x="78" y="719" class="body">Ticket titles + resolutions</text>
+<text x="78" y="740" class="body">Built in local memory</text>
+<rect x="365" y="665" width="260" height="100" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="383" y="694" class="heading">NomicEmbeddings</text>
+<text x="383" y="719" class="body">search_query: for questions</text>
+<text x="383" y="740" class="body">search_document: for corpus</text>
+<rect x="705" y="665" width="260" height="100" rx="13" fill="#fff" stroke="#cbdbe7"/>
+<text x="723" y="694" class="heading">nomic-embed-text</text>
+<text x="723" y="719" class="body">Local embedding generation</text>
+<text x="723" y="740" class="body">768-dimensional vectors</text>
+<path d="M390 610 V636 H190 V665" class="edge"/>
+<text x="73" y="629" class="small">Keyword search</text>
+<path d="M495 610 V665" class="edge"/>
+<text x="505" y="646" class="small">Query embedding</text>
+<path d="M625 698 H705" class="edge"/>
+<path d="M705 736 H625" class="edge"/>
+<rect x="60" y="830" width="260" height="95" rx="13" fill="#f4f7fb" stroke="#cbdbe7"/>
+<text x="78" y="859" class="heading">JSON source files</text>
+<text x="78" y="884" class="body">10 FAQs, 7 manuals</text>
+<text x="78" y="905" class="body">10 resolved tickets</text>
+<rect x="365" y="830" width="260" height="95" rx="13" fill="#e8f6f3" stroke="#92c8bd"/>
+<text x="383" y="859" class="heading">Ingestion command</text>
+<text x="383" y="884" class="body">Validate, redact and chunk</text>
+<text x="383" y="905" class="body">Embed FAQs and manuals</text>
+<path d="M190 830 V765" class="edge"/>
+<text x="73" y="805" class="small">Load at startup</text>
+<path d="M320 875 H365" class="ingest"/>
+<path d="M495 830 V765" class="ingest"/>
+<path d="M625 883 H1021 V643 H1205 V620" class="ingest"/>
+<text x="739" y="870" class="small">FAQ/manual upserts only</text>
+<text x="1060" y="693" class="heading">Data boundaries</text>
+<text x="1060" y="725" class="body">Tickets remain local.</text>
+<text x="1060" y="752" class="body">Semantic queries send vectors.</text>
+<text x="1060" y="779" class="body">No OpenAI API calls.</text>
+<text x="46" y="999" class="body">Response: cited answer with source excerpts, or customer support fallback when evidence is insufficient.</text>
+<path d="M46 1036 H100" class="edge"/><text x="113" y="1041" class="small">Chat and retrieval flow</text>
+<path d="M390 1036 H445" class="ingest"/><text x="459" y="1041" class="small">Ingestion flow</text>
+<text x="756" y="1041" class="small">UI calls ChatService directly; FastAPI is an alternative interface.</text>
+</svg>

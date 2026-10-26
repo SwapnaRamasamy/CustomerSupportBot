@@ -1,6 +1,8 @@
 # Car insurance support RAG
 
-Answers use only the JSON files in `data/`. FAQs/manuals are embedded in Pinecone; local BM25 searches tickets plus FAQs/manuals. Rankings are merged with reciprocal rank fusion. LangGraph runs query rewriting, retrieval, structured generation, citation validation, and a separate grounding review. Each answer claim has application-rendered source citations, with titles, filenames and excerpts in the API response. Missing/conflicting evidence routes to customer support.
+[Project documentation and architecture](PROJECT_DOCUMENTATION.md) | [Evaluation report](EVALUATION_REPORT.md)
+
+Answers use only the JSON files in `data/`. FAQs/manuals are embedded in Pinecone; local BM25 searches tickets only. Rankings are merged with reciprocal rank fusion. LangGraph runs query rewriting, retrieval, structured generation, citation validation, and a separate grounding review. Each answer claim has application-rendered source citations, with titles, filenames and excerpts in the API response. Missing/conflicting evidence routes to customer support.
 
 ## Setup (PowerShell)
 
@@ -92,3 +94,5 @@ Metrics include expected-source hit rate and recall at configured k, reciprocal 
 ```
 
 Open http://127.0.0.1:8501. Keep Ollama running. The interface uses the existing ChatService and Pinecone configuration, with no re-indexing needed. Suggested questions, follow-up conversation history, expandable citations, support fallback, and a new-conversation button are included. Conversations remain in browser-session server memory and are cleared on reset; messages are not written to project files. Closing a tab does not guarantee immediate deletion from server memory. Service initialization is cached, but conversation histories are separate for each session. Restart Streamlit after changing `.env` or source data. The server binds to localhost; the UI is not publicly deployed. Source excerpts are displayed as plain text. Decorative fonts optionally load from Google Fonts, with local system-font fallbacks.
+
+BM25 now indexes only ticket titles and resolution text. FAQ/manual retrieval is semantic-only through Pinecone. Restart running chat services, including Streamlit, after this change to rebuild the cached keyword index. Existing vectors do not need re-ingestion. Saved evaluation results describe the earlier mixed-source BM25 configuration; rerun evaluation for this retrieval configuration.
