@@ -1,0 +1,44 @@
+[
+  {
+    "id": "insurance-manual-001",
+    "source": "Manual",
+    "title": "Understanding Your Auto Policy",
+    "content": "The declarations page summarizes the insured vehicles and drivers, policy period, selected coverages, limits, and deductibles. The policy contract describes coverage terms, conditions, exclusions, and duties after a loss. Review both documents and contact an authorized agent or insurer representative when you need help interpreting your specific policy. Coverage cannot be confirmed from a general summary alone."
+  },
+  {
+    "id": "insurance-manual-002",
+    "source": "Manual",
+    "title": "Accident Scene and Claim Reporting",
+    "content": "After an accident, prioritize safety and contact emergency services when needed. Exchange driver, vehicle, and insurance details; gather witness contact information; and take photos only when it is safe and lawful. Report the incident promptly through the insurer's approved claim channel. Provide accurate facts and preserve related receipts and documents. Do not promise fault, coverage, or settlement outcomes before the claim review."
+  },
+  {
+    "id": "insurance-manual-003",
+    "source": "Manual",
+    "title": "Auto Claim Review and Repair Estimates",
+    "content": "After a claim is reported, the insurer may request statements, photos, documents, or an inspection. An assigned adjuster reviews the information under the policy and explains next steps. If a repair shop's estimate differs from the insurer's estimate, submit the itemized estimate and supporting photos to the adjuster for review before assuming the difference is covered. Repairs, payment, and settlement are subject to the policy and claim decision."
+  },
+  {
+    "id": "insurance-manual-004",
+    "source": "Manual",
+    "title": "Requesting Policy Changes",
+    "content": "Policyholders can request changes to vehicles, drivers, addresses, and coverage through the insurer's secure portal or an authorized agent. Collect the information needed for the request and its intended effective date. Explain that changes may require review, documents, and premium adjustment. A request is not complete until the insurer confirms the change and effective date."
+  },
+  {
+    "id": "insurance-manual-005",
+    "source": "Manual",
+    "title": "Premium Billing and Renewal",
+    "content": "Billing documents show the amount due, due date, payment method, and any installment or renewal details. If a payment fails, use the insurer's secure billing portal or contact the billing team for retry options and confirmation of account status. Do not collect full payment card or bank account details through ordinary support messages. For questions about cancellation notices, grace periods, or reinstatement, refer to the insurer's billing team and applicable policy documents."
+  },
+  {
+    "id": "insurance-manual-006",
+    "source": "Manual",
+    "title": "Proof of Insurance and Policy Documents",
+    "content": "Customers can usually access proof-of-insurance cards and policy documents through the insurer's website or mobile app. Confirm the policyholder and policy status before providing or directing a customer to a document. If a card is missing or policy details appear incorrect, route the request to an authorized representative for verification. Share documents only through approved secure channels."
+  },
+  {
+    "id": "insurance-manual-007",
+    "source": "Manual",
+    "title": "Customer Information and Secure Support",
+    "content": "Use the insurer's approved identity-verification process before discussing policy or claim details. Request only information necessary to assist with the inquiry and direct customers to secure channels for sensitive documents. Never ask a customer to send an account password, full payment card number, or authentication code. Escalate suspected fraud, privacy concerns, and requests requiring licensed advice through the insurer's established procedures."
+  }
+]

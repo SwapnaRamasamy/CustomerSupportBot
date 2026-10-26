@@ -1,0 +1,20 @@
+20-query RAG evaluation
+
+Dataset: 15 answerable questions and 5 expected support fallbacks.
+Reviewed safe-handling resolution: 17/20 (85%). Includes 5 correct support fallbacks.
+Reviewed answerable resolution: 12/15 (80%).
+Automated lexical resolution proxy: 17/20 (85%); it flags different cases than source review.
+Retrieval hit@6: 15/15 (100%). Expected-source recall@6: 93.3%. MRR@6: 0.967.
+Citation validity among returned answers: 14/14 (100%); this checks source references, not factual entailment.
+Source-review grounding among returned answers: 13/14 (92.9%).
+Expected fallback recall: 5/5 (100%). Fallback precision: 5/6 (83.3%).
+Median latency: 66.6 seconds. P95: 94.8 seconds. Total query time: 1,231.5 seconds (~20.5 minutes).
+Infrastructure errors: 0.
+
+Findings:
+- Claim filing: unnecessary fallback despite relevant retrieved evidence.
+- New vehicle: generic answer omitted specific requested information available in tickets.
+- Premium increase: phrased possible causes as this customer's established causes.
+- Rental coverage: adequate direct answer; automated phrase rubric was too strict.
+
+Limitations: Small synthetic corpus-derived dataset, single run, no independent human reviewer. Review was performed by the coding assistant against supplied source text. No real-world first-contact resolution or customer satisfaction was measured. The same local chat model also performs the pipeline grounding review. The support phone remains unconfigured.

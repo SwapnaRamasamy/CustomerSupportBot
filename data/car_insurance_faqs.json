@@ -1,0 +1,62 @@
+[
+  {
+    "id": "insurance-faq-001",
+    "source": "FAQ",
+    "title": "What does car insurance typically cover?",
+    "content": "Coverage depends on the policy and options selected. Auto policies may include liability coverage for covered injuries or property damage to others, collision coverage for damage to the insured vehicle from a covered collision, and comprehensive coverage for certain non-collision losses. Check your declarations page and policy wording for your actual coverages, limits, exclusions, and deductible."
+  },
+  {
+    "id": "insurance-faq-002",
+    "source": "FAQ",
+    "title": "What should I do after a car accident?",
+    "content": "First, move to a safe location if possible and contact emergency services if anyone is injured or there is immediate danger. Exchange contact and insurance details with the other driver, document the scene when safe, and report the accident to your insurer promptly. Avoid admitting fault at the scene; the insurer will review the facts and applicable policy."
+  },
+  {
+    "id": "insurance-faq-003",
+    "source": "FAQ",
+    "title": "How do I file an auto insurance claim?",
+    "content": "Report the incident through your insurer's claims portal, mobile app, agent, or claims phone line. Provide your policy details, when and where it happened, a description of the incident, and any available photos or documents. Your insurer will explain next steps and may assign an adjuster. Claim handling and coverage decisions depend on the facts and policy terms."
+  },
+  {
+    "id": "insurance-faq-004",
+    "source": "FAQ",
+    "title": "What is an auto insurance deductible?",
+    "content": "A deductible is the amount you may need to pay toward a covered loss before your insurer pays the remaining covered amount, subject to policy terms and limits. Deductibles generally apply to specific coverages, such as collision or comprehensive, and may differ by coverage. Check your declarations page for the amounts that apply."
+  },
+  {
+    "id": "insurance-faq-005",
+    "source": "FAQ",
+    "title": "How can I get proof of insurance?",
+    "content": "Sign in to your insurer's website or mobile app and look under ID Cards, Documents, or Policy. Many insurers provide a digital insurance card or a printable copy. If it is unavailable, contact your agent or customer service to confirm the policy is active and request an approved proof-of-insurance document."
+  },
+  {
+    "id": "insurance-faq-006",
+    "source": "FAQ",
+    "title": "How do I add a car or driver to my policy?",
+    "content": "Contact your insurer or authorized agent, or submit a change through the policy portal if available. Be ready to provide the vehicle or driver's details and the date the change should take effect. Eligibility, documentation, premium impact, and effective date vary; wait for confirmation that the change has been processed."
+  },
+  {
+    "id": "insurance-faq-007",
+    "source": "FAQ",
+    "title": "Why did my car insurance rate change?",
+    "content": "Premiums can change at renewal due to factors such as policy coverage and limits, vehicle or driver information, claims and driving history, discounts, and changes in rating rules or regional costs. Review your renewal documents and ask your insurer or licensed agent to explain the change and check whether you qualify for available discounts."
+  },
+  {
+    "id": "insurance-faq-008",
+    "source": "FAQ",
+    "title": "Does car insurance cover a rental car?",
+    "content": "Coverage for a rental vehicle depends on your policy, the vehicle, and where and how it is rented. Some existing coverages may apply in certain circumstances, but this is not guaranteed. Review your policy and ask your insurer before declining rental-company coverage; also check any applicable credit-card benefits."
+  },
+  {
+    "id": "insurance-faq-009",
+    "source": "FAQ",
+    "title": "How can I check my claim status?",
+    "content": "Sign in to your online account or app and open the Claims section to view available updates and document requests. You can also contact the claims team using your claim number. Timing varies by claim; your adjuster can explain any outstanding steps."
+  },
+  {
+    "id": "insurance-faq-010",
+    "source": "FAQ",
+    "title": "How do I cancel my auto insurance?",
+    "content": "The named policyholder can request cancellation through the insurer's approved channel and specify a requested end date. Cancellation timing, fees, refunds, and required documents depend on the policy and applicable rules. Confirm replacement coverage before ending your current policy, and wait for written or account confirmation that cancellation is complete."
+  }
+]

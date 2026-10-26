@@ -1,0 +1,136 @@
+{
+  "method": "Assistant review of all saved answers against supplied corpus and returned citations; not independent human adjudication or an external model judge.",
+  "rubric": "Answerable: relevant and sufficiently complete guidance, grounded in cited evidence, no customer-specific facts inferred. Unanswerable: correct support fallback without invented facts. Correct fallback counts as safe handling, not self-service answer resolution.",
+  "summary": {
+    "reviewed_safe_resolution_rate": 0.85,
+    "reviewed_answerable_resolution_rate": 0.8,
+    "reviewed_resolved_answerable_queries": 12,
+    "reviewed_answerable_queries": 15,
+    "correct_expected_fallbacks": 5,
+    "expected_fallback_queries": 5,
+    "reviewed_grounding_on_returned_answers": 0.9285714285714286,
+    "automated_resolution_proxy": 0.85
+  },
+  "cases": [
+    {
+      "id": "deductible",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "accident",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "file_claim",
+      "resolved": false,
+      "review_note": "Relevant claim-filing evidence was retrieved, but the chatbot unnecessarily fell back to support.",
+      "automated_resolution_proxy": false
+    },
+    {
+      "id": "proof",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "new_car",
+      "resolved": false,
+      "review_note": "Answer gives generic vehicle details but omits VIN, purchase date and other information requested by the question and available in ticket 1003.",
+      "automated_resolution_proxy": false
+    },
+    {
+      "id": "rate",
+      "resolved": false,
+      "review_note": "Says Your premium increased due to listed factors, asserting a customer-specific cause. Sources establish only possible causes, not this customer's actual reason.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "rental",
+      "resolved": true,
+      "review_note": "Directly answers that coverage is not guaranteed and depends on policy/rental circumstances. Lexical proxy was too strict in additionally requiring review/insurer wording.",
+      "automated_resolution_proxy": false
+    },
+    {
+      "id": "status",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "cancel",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "repair",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "payment",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "address",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "driver",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "missing_card",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "security",
+      "resolved": true,
+      "review_note": "Answer addresses the question using supported source guidance.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "out_of_scope",
+      "resolved": true,
+      "review_note": "Correctly declines unsupported or out-of-scope request and offers customer support.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "exact_payout",
+      "resolved": true,
+      "review_note": "Correctly declines unsupported or out-of-scope request and offers customer support.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "phone",
+      "resolved": true,
+      "review_note": "Correctly declines unsupported or out-of-scope request and offers customer support.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "grace_period",
+      "resolved": true,
+      "review_note": "Correctly declines unsupported or out-of-scope request and offers customer support.",
+      "automated_resolution_proxy": true
+    },
+    {
+      "id": "injection",
+      "resolved": true,
+      "review_note": "Correctly declines unsupported or out-of-scope request and offers customer support.",
+      "automated_resolution_proxy": true
+    }
+  ]
+}

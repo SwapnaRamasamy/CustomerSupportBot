@@ -1,0 +1,62 @@
+[
+  {
+    "id": "insurance-ticket-1001",
+    "source": "Ticket",
+    "title": "How do I report a car accident?",
+    "content": "Resolution: Ask the customer to report the accident as soon as possible through the insurer's claims portal or claims phone line. Collect the policy number, date and location of the accident, a description of what happened, and the names and contact details of involved drivers and witnesses. Advise the customer to contact emergency services if anyone is injured or there is immediate danger. Do not promise coverage or fault determinations before the claim is reviewed."
+  },
+  {
+    "id": "insurance-ticket-1002",
+    "source": "Ticket",
+    "title": "Where can I check the status of my auto claim?",
+    "content": "Resolution: Direct the customer to sign in to the online account and open Claims to view available status updates, assigned adjuster details, and outstanding document requests. If the claim is not listed or the status has not changed after the expected update window, contact the claims team with the claim number. Never request a full payment card number or account password."
+  },
+  {
+    "id": "insurance-ticket-1003",
+    "source": "Ticket",
+    "title": "Can I add a newly purchased vehicle to my policy?",
+    "content": "Resolution: Ask the customer to contact an authorized agent or use the policy portal to request a vehicle change. Gather the vehicle identification number, purchase date, primary use, garaging address, and any lienholder information. Explain that eligibility, effective date, required documents, and premium changes depend on the policy and applicable rules; confirm the change only after it is processed."
+  },
+  {
+    "id": "insurance-ticket-1004",
+    "source": "Ticket",
+    "title": "My proof of insurance card is not available in the app",
+    "content": "Resolution: Have the customer refresh the app, confirm they are signed in to the account associated with the active policy, and check Documents or ID Cards. If the policy was recently issued or renewed, allow processing time and verify the policy status with an authorized representative. Provide an approved digital or printable insurance card only after confirming the policy details."
+  },
+  {
+    "id": "insurance-ticket-1005",
+    "source": "Ticket",
+    "title": "Why did my auto insurance premium increase at renewal?",
+    "content": "Resolution: Explain that renewal premiums can change based on updated rating information, coverage selections, vehicle details, claims history, discounts, and regional factors. Review the renewal declarations and billing notice with the customer, and refer specific rating questions or discount eligibility to a licensed representative. Do not guarantee a rate or discount before review."
+  },
+  {
+    "id": "insurance-ticket-1006",
+    "source": "Ticket",
+    "title": "How do I add another driver to my policy?",
+    "content": "Resolution: Direct the customer to submit a driver change through the policy portal or an authorized agent. Collect the driver's legal name, date of birth, license details, household relationship, and when they began using the vehicle, using the insurer's secure channel. Explain that the request may affect eligibility or premium and is not complete until the insurer confirms the update."
+  },
+  {
+    "id": "insurance-ticket-1007",
+    "source": "Ticket",
+    "title": "I received a repair estimate that is lower than the shop's estimate",
+    "content": "Resolution: Ask the customer to share the repair shop's itemized estimate and photos with the assigned claims adjuster using the secure claims portal. The adjuster can review differences, coordinate an inspection if needed, and explain the next steps under the policy and claims process. Do not authorize repairs or guarantee reimbursement on the insurer's behalf."
+  },
+  {
+    "id": "insurance-ticket-1008",
+    "source": "Ticket",
+    "title": "How can I update my vehicle's garaging address?",
+    "content": "Resolution: Ask the policyholder to submit the new garaging address and move date through the policy portal or an authorized agent. Confirm whether the vehicle is kept at that address most of the time and whether the change is temporary or permanent. The update may change rating or policy availability; confirm the effective date after processing."
+  },
+  {
+    "id": "insurance-ticket-1009",
+    "source": "Ticket",
+    "title": "My automatic premium payment failed",
+    "content": "Resolution: Ask the customer to review the billing page for the amount due, payment due date, and available retry or payment options. If updating a payment method, use the insurer's secure portal rather than collecting sensitive payment details in a support message. Refer questions about cancellation notices, grace periods, or reinstatement to the billing team for confirmation."
+  },
+  {
+    "id": "insurance-ticket-1010",
+    "source": "Ticket",
+    "title": "Can I cancel my car insurance policy?",
+    "content": "Resolution: Direct the named policyholder to request cancellation through the insurer's approved channel and provide the requested effective date and reason. Explain that any refund, fees, required documents, and cancellation date depend on the policy and applicable requirements. Recommend confirming replacement coverage before ending an active policy; do not state that coverage has ended until cancellation is confirmed."
+  }
+]
