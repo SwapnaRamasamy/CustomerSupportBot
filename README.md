@@ -84,3 +84,11 @@ The labeled dataset is `evaluation/queries.json`: 15 answerable cases and five e
 Metrics include expected-source hit rate and recall at configured k, reciprocal rank, answer rate, fallback precision/recall, routing accuracy, citation validity, expected-fact coverage, and median/p95 latency. Retrieval metrics apply only to answerable queries. Expected-source labels are not exhaustive. Citation validity checks source existence and returned excerpts, not whether every claim is logically entailed. Expected-fact coverage uses case-insensitive phrase groups and can misjudge paraphrases or negations.
 
 `automated_resolution_proxy` requires an answer with valid citations and all expected phrase groups for answerable questions, or a correct support fallback for unanswerable questions. Infrastructure errors always fail resolution. This proxy includes correct escalations and is not a production first-contact-resolution metric. Review saved answers against source text before assessing correctness/groundedness. This small synthetic corpus-derived evaluation does not establish general performance. No independent model judge is used. Timing includes retrieval, generation, and review, but excludes initial service setup.
+
+## Browser chat interface
+
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run streamlit_app.py
+```
+
+Open http://127.0.0.1:8501. Keep Ollama running. The interface uses the existing ChatService and Pinecone configuration, with no re-indexing needed. Suggested questions, follow-up conversation history, expandable citations, support fallback, and a new-conversation button are included. Conversations remain in browser-session server memory and are cleared on reset; messages are not written to project files. Closing a tab does not guarantee immediate deletion from server memory. Service initialization is cached, but conversation histories are separate for each session. Restart Streamlit after changing `.env` or source data. The server binds to localhost; the UI is not publicly deployed. Source excerpts are displayed as plain text. Decorative fonts optionally load from Google Fonts, with local system-font fallbacks.
